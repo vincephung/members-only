@@ -1,0 +1,23 @@
+<div class="form-container">
+    <form method='POST' action=''>
+        <h2>Create a post</h2>
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" placeholder="Title" name="title" required='true'>
+        </div>
+        <div class="form-group">
+            <label for="text">Message:</label>
+            <textarea class="form-control" id="text" rows="3" name="text" required='true'></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <div class="form-error">
+        {{#if errors}}
+        <ul>
+            {{#each errors}}
+            <li>Error: {{this.msg}}</li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+</div>

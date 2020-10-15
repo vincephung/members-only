@@ -1,0 +1,35 @@
+<form action="" method="POST">
+    <h1>Sign up</h1>
+    <div class="form-group">
+        <label for="firstName">First Name: </label>
+        <input type="text" class="form-control" id="firstName" name="firstName" value={{userInfo.firstName}}>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name: </label>
+        <input type="text" class="form-control" id="lastName" name="lastName" value={{userInfo.lastName}}>
+    </div>
+    <div class="form-group">
+        <label for="username">username:</label>
+        <input type="email" class="form-control" id="username" aria-describedby="emailHelp"
+            placeholder="enter your email" name="username" value={{userInfo.username}}>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <div class="form-group">
+        <label for="passwordConfirm">Confirm your Password:</label>
+        <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{#if errors}}
+<ul>
+    {{#each errors}}
+    <li>Error: {{this.msg}}</li>
+    {{/each}}
+</ul>
+{{/if}}
+</div>
+</div>

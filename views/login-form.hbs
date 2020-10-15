@@ -1,0 +1,12 @@
+<form action="" method="POST" class="form">
+    <label class="label" for="username">Username:</label>
+    <input class="p-2 rounded focus:bg-gray-300" type="email" name="username">
+    <label class="label" for="password">Password:</label>
+    <input class="p-2 rounded focus:bg-gray-300" type="password" name="password">
+    <button class="form-button">Log in</button>
+</form>
+{{#if error}}
+<ul class="form-errors">
+    <li class="text-center">{{error}}</li>
+</ul>
+{{/if}}

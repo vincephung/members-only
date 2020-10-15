@@ -1,0 +1,15 @@
+<form action="" method="POST">
+    <h1>Become a member!</h1>
+    <div class="form-group">
+        <label for="secretPassword">Enter the secret password: </label>
+        <input type="text" class="form-control" id="secretPassword" name="secretPassword">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{#if errors}}
+<ul>
+    <li>Error: Entered wrong password</li>
+</ul>
+{{/if}}
+</div>
+</div>

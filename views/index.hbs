@@ -1,0 +1,31 @@
+{{#if user}}
+<h1>Welcome back! {{user.username}} </h1>
+<a href="/log-out" class="btn btn-primary">Log Out</a>
+{{#if user.isMember}}
+<a href="/message" class="btn btn-primary">Create a post</a>
+{{else}}
+<a href="/membership" class="btn btn-primary">Become a member</a>
+{{/if}}
+{{else }}
+<div class="header">
+
+    <h2>You are not logged in!</h2>
+    <div class="buttons">
+        <a href="/sign-up" class="btn btn-primary">Sign up</a>
+        <a href="/log-in" class="btn btn-primary">Log In</a>
+    </div>
+    {{/if}}
+</div>
+<div class="container">
+    {{#each messages}}
+    <div class="row">
+        <div class="col">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.text}}</p>
+            {{#if @root.user.isMember}}<p>Posted By: {{user.fullName}}</p>
+            {{else}}<p>Only members can see who posted this.</p>
+            {{/if}}
+        </div>
+    </div>
+    {{/each}}
+</div>
